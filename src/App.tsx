@@ -4,6 +4,7 @@ import { useIsMobile } from './hooks/useIsMobile';
 import Navbar from './components/Navbar';
 import MobileLoader from './components/mobile/MobileLoader';
 import MobileHeader from './components/mobile/MobileHeader';
+import MobileFloatingActions from './components/mobile/MobileFloatingActions';
 import Hero from './components/Hero';
 import About from './components/About';
 import LifeStages from './components/LifeStages';
@@ -55,6 +56,7 @@ export default function App() {
         )}
 
         {(!isMobile || mobileReady) && <Footer />}
+        {isMobile && mobileReady && <MobileFloatingActions />}
       </div>
     </LayoutGroup>
   );

@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import Scene3D from './Scene3D';
 import TypewriterTitle from './TypewriterTitle';
 import { heroBadges, stats } from '../data/content';
-import treeLogo from '../assets/t logo.png';
+import treeLogo from '../assets/t logo_new.png';
 import './Hero.css';
 
 interface HeroProps {

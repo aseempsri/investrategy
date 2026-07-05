@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import treeLogo from '../../assets/t logo.png';
+import treeLogo from '../../assets/t logo_new.png';
 import brandLogo from '../../assets/main logo_-Photoroom.png';
 import './MobileLoader.css';
 
@@ -46,13 +46,14 @@ export default function MobileLoader({ onComplete }: MobileLoaderProps) {
       transition={{ duration: 0.65, ease: 'easeInOut' }}
     >
       <div className="mobile-loader__content">
-        <motion.img
-          src={treeLogo}
-          alt=""
-          className="mobile-loader__tree"
+        <motion.div
+          className="mobile-loader__tree-wrap"
           animate={{ y: [0, -14, 0] }}
           transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut' }}
-        />
+        >
+          <span className="mobile-loader__tree-glow" aria-hidden="true" />
+          <img src={treeLogo} alt="" className="mobile-loader__tree" />
+        </motion.div>
 
         <motion.div
           className="mobile-loader__logo-mark"
