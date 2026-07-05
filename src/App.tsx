@@ -36,12 +36,11 @@ export default function App() {
       <div className={`app-root${isMobile && mobileReady ? ' app-root--mobile' : ''}`}>
         {showLoader && <MobileLoader onComplete={handleLoadComplete} />}
 
-        {isMobile && mobileReady && <MobileHeader />}
-
         {!isMobile && <Navbar />}
 
         {(!isMobile || mobileReady) && (
         <main className={isMobile && mobileReady ? 'main--mobile' : undefined}>
+          {isMobile && mobileReady && <MobileHeader />}
           <Hero isMobileReady={isMobile && mobileReady} />
           <About />
           <LifeStages />

@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import RunningBoldText from './RunningBoldText';
+import ownerPhoto from '../assets/owner.png';
 import {
   aboutStory,
   approachPoints,
@@ -55,10 +56,16 @@ export default function About() {
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.15 }}
           >
-            <div className="about__founder-top">
-              <span className="about__founder-badge">Est. {company.founded}</span>
-              <h3>{company.founder}</h3>
-              <span className="about__founder-title">{company.founderTitle}</span>
+            <div className="about__founder-profile">
+              <div className="about__founder-photo">
+                <img src={ownerPhoto} alt={company.founder} />
+              </div>
+              <div className="about__founder-identity">
+                <span className="about__founder-badge">Est. {company.founded}</span>
+                <h3>{company.founder}</h3>
+                <span className="about__founder-title">{company.founderTitle}</span>
+                <span className="about__founder-rule" aria-hidden="true" />
+              </div>
             </div>
             <p className="about__founder-bio">
               Founded Investrategy during the 2008 global financial crisis with a belief that true

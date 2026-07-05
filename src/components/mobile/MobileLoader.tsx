@@ -54,13 +54,17 @@ export default function MobileLoader({ onComplete }: MobileLoaderProps) {
           transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut' }}
         />
 
-        <motion.img
-          src={brandLogo}
-          alt="investrategy"
-          className="mobile-loader__logo"
+        <motion.div
+          className="mobile-loader__logo-mark"
           layoutId="mobile-brand-logo"
           transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
-        />
+        >
+          <img
+            src={brandLogo}
+            alt="investrategy"
+            className="mobile-loader__logo"
+          />
+        </motion.div>
 
         <div className="mobile-loader__progress-wrap">
           <div className="mobile-loader__progress-label">

@@ -43,12 +43,18 @@ export default function MobileHeader() {
     <header className="mobile-header">
       <div className="mobile-header__top">
         <a href="#" className="mobile-header__logo">
-          <motion.img
-            src={brandLogo}
-            alt="investrategy"
+          <motion.div
+            className="mobile-header__logo-mark"
             layoutId="mobile-brand-logo"
             transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
-          />
+          >
+            <span className="mobile-header__logo-glow" aria-hidden="true" />
+            <img
+              src={brandLogo}
+              alt="investrategy"
+              className="mobile-header__logo-img"
+            />
+          </motion.div>
         </a>
       </div>
 

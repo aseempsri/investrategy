@@ -16,16 +16,12 @@
 }
 
 .app-root--mobile {
-  --mobile-header-height: 108px;
-}
-
-main.main--mobile {
-  padding-top: var(--mobile-header-height);
+  --mobile-header-height: 120px;
 }
 
 main.main--mobile .hero {
-  min-height: calc(100dvh - var(--mobile-header-height));
-  padding-top: 1.25rem;
+  min-height: auto;
+  padding-top: 0.5rem;
   align-items: flex-start;
 }
 
