@@ -1,5 +1,5 @@
 .process {
-  background: radial-gradient(ellipse at 20% 80%, rgba(200, 245, 66, 0.03) 0%, transparent 50%);
+  background: radial-gradient(ellipse at 20% 80%, var(--accent-08) 0%, transparent 50%);
 }
 
 .process__header {

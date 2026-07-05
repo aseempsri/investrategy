@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { navLinks } from '../../data/content';
-import brandLogo from '../../assets/investrategy logo.png';
+import brandLogo from '../../assets/main logo_-Photoroom.png';
 import './MobileHeader.css';
 
 export default function MobileHeader() {

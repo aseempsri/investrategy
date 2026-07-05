@@ -33,12 +33,12 @@
 }
 
 .calculators__item:hover {
-  background: rgba(255, 255, 255, 0.06);
+  background: var(--accent-08);
 }
 
 .calculators__item--active {
-  background: rgba(200, 245, 66, 0.08) !important;
-  border-color: rgba(200, 245, 66, 0.25);
+  background: var(--accent-08) !important;
+  border-color: var(--accent-25);
 }
 
 .calculators__item-name {

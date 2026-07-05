@@ -22,7 +22,7 @@
 }
 
 .services__card:hover {
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4), 0 0 32px rgba(200, 245, 66, 0.06);
+  box-shadow: 0 16px 48px var(--shadow-medium), 0 0 32px var(--accent-08);
 }
 
 .services__tag {
@@ -32,7 +32,7 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--accent);
-  background: rgba(200, 245, 66, 0.1);
+  background: var(--accent-10);
   padding: 0.3rem 0.75rem;
   border-radius: 980px;
   margin-bottom: 1.25rem;

@@ -1,5 +1,5 @@
 import { company } from '../data/content';
-import { publicAsset } from '../utils/paths';
+import brandLogo from '../assets/main logo_-Photoroom.png';
 import './Footer.css';
 
 export default function Footer() {
@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="container">
         <div className="footer__top">
           <div className="footer__brand">
-            <img src={publicAsset('logo.png')} alt="investrategy" />
+            <img src={brandLogo} alt="investrategy" />
             <p>
               Building financial discipline, fostering trust, and nurturing long-term relationships
               that endure beyond market cycles — since {company.founded}.

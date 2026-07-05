@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import heroTree from '../../assets/image.png';
-import brandLogo from '../../assets/investrategy logo.png';
+import treeLogo from '../../assets/t logo.png';
+import brandLogo from '../../assets/main logo_-Photoroom.png';
 import './MobileLoader.css';
 
 interface MobileLoaderProps {
@@ -47,7 +47,7 @@ export default function MobileLoader({ onComplete }: MobileLoaderProps) {
     >
       <div className="mobile-loader__content">
         <motion.img
-          src={heroTree}
+          src={treeLogo}
           alt=""
           className="mobile-loader__tree"
           animate={{ y: [0, -14, 0] }}

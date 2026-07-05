@@ -13,9 +13,11 @@
 }
 
 .navbar--scrolled {
-  background: rgba(5, 5, 8, 0.85);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(32px) saturate(200%);
   -webkit-backdrop-filter: blur(32px) saturate(200%);
+  border-bottom: 1px solid var(--glass-border);
+  box-shadow: 0 4px 24px var(--shadow-soft);
 }
 
 .navbar__inner {
@@ -38,19 +40,7 @@
 .navbar__logo img {
   height: 40px;
   width: auto;
-  /* Lift dark charcoal letters off the dark navbar without altering the logo artwork */
-  filter:
-    brightness(2.8)
-    contrast(1.04)
-    saturate(1.12)
-    drop-shadow(0 0 14px rgba(200, 245, 66, 0.22))
-    drop-shadow(0 1px 3px rgba(255, 255, 255, 0.08));
-  -webkit-filter:
-    brightness(2.8)
-    contrast(1.04)
-    saturate(1.12)
-    drop-shadow(0 0 14px rgba(200, 245, 66, 0.22))
-    drop-shadow(0 1px 3px rgba(255, 255, 255, 0.08));
+  filter: drop-shadow(0 2px 8px var(--shadow-soft));
 }
 
 .navbar__links {
@@ -68,7 +58,7 @@
 }
 
 .navbar__links a:hover {
-  color: var(--text-primary);
+  color: var(--accent-dim);
 }
 
 .navbar__actions {

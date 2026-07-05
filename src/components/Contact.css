@@ -1,5 +1,5 @@
 .contact {
-  background: radial-gradient(ellipse at 50% 100%, rgba(200, 245, 66, 0.05) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 50% 100%, var(--accent-08) 0%, transparent 60%);
 }
 
 .contact__layout {
@@ -68,7 +68,7 @@
 .contact__form select,
 .contact__form textarea {
   padding: 0.875rem 1.125rem;
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--accent-08);
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-sm);
   color: var(--text-primary);
@@ -92,7 +92,7 @@
 .contact__form input:focus,
 .contact__form select:focus,
 .contact__form textarea:focus {
-  border-color: rgba(200, 245, 66, 0.4);
+  border-color: var(--accent-25);
 }
 
 .contact__form input::placeholder,
@@ -120,7 +120,7 @@
   font-size: 3rem;
   line-height: 1;
   margin-bottom: 1.25rem;
-  filter: drop-shadow(0 4px 12px rgba(212, 255, 77, 0.3));
+  filter: drop-shadow(0 4px 12px var(--accent-glow));
 }
 
 .contact__success h3 {

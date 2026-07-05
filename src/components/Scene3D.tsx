@@ -42,8 +42,8 @@ function GrowthCurves() {
           <mesh>
             <tubeGeometry args={[curve, 100, 0.018, 6, false]} />
             <meshStandardMaterial
-              color="#c8f542"
-              emissive="#c8f542"
+              color="#76ba43"
+              emissive="#76ba43"
               emissiveIntensity={0.5}
               transparent
               opacity={opacity}
@@ -54,8 +54,8 @@ function GrowthCurves() {
             <mesh>
               <tubeGeometry args={[curve, 100, 0.06, 6, false]} />
               <meshStandardMaterial
-                color="#c8f542"
-                emissive="#c8f542"
+                color="#76ba43"
+                emissive="#76ba43"
                 emissiveIntensity={0.3}
                 transparent
                 opacity={0.06}
@@ -80,7 +80,7 @@ function HorizonGrid() {
   return (
     <gridHelper
       ref={ref}
-      args={[40, 60, '#c8f542', '#1a1a1f']}
+      args={[40, 60, '#76ba43', '#e2e6ea']}
       position={[0, -2.5, -4]}
       rotation={[0, 0, 0]}
     />
@@ -115,8 +115,8 @@ function DataNodes() {
         <mesh key={i} position={[n.x, n.y, n.z]}>
           <sphereGeometry args={[n.size, 8, 8]} />
           <meshStandardMaterial
-            color="#c8f542"
-            emissive="#c8f542"
+            color="#76ba43"
+            emissive="#76ba43"
             emissiveIntensity={0.8}
             transparent
             opacity={0.7}
@@ -169,7 +169,7 @@ function ConnectionLines() {
 
   return (
     <lineSegments ref={ref} geometry={geometry}>
-      <lineBasicMaterial color="#c8f542" transparent opacity={0.08} />
+      <lineBasicMaterial color="#76ba43" transparent opacity={0.12} />
     </lineSegments>
   );
 }
@@ -199,7 +199,7 @@ function AmbientDust() {
       <bufferGeometry>
         <bufferAttribute attach="attributes-position" args={[positions, 3]} />
       </bufferGeometry>
-      <pointsMaterial size={0.025} color="#ffffff" transparent opacity={0.25} sizeAttenuation />
+      <pointsMaterial size={0.025} color="#b59a57" transparent opacity={0.18} sizeAttenuation />
     </points>
   );
 }
@@ -207,12 +207,12 @@ function AmbientDust() {
 function Scene() {
   return (
     <>
-      <ambientLight intensity={0.15} />
-      <directionalLight position={[5, 8, 5]} intensity={0.4} color="#ffffff" />
-      <pointLight position={[-3, 2, 2]} intensity={0.6} color="#c8f542" />
-      <pointLight position={[4, -1, -2]} intensity={0.2} color="#a2d026" />
+      <ambientLight intensity={0.55} />
+      <directionalLight position={[5, 8, 5]} intensity={0.35} color="#ffffff" />
+      <pointLight position={[-3, 2, 2]} intensity={0.35} color="#76ba43" />
+      <pointLight position={[4, -1, -2]} intensity={0.15} color="#b59a57" />
 
-      <fog attach="fog" args={['#050508', 6, 18]} />
+      <fog attach="fog" args={['#f7f8fa', 8, 20]} />
 
       <HorizonGrid />
       <GrowthCurves />

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { navLinks } from '../data/content';
-import { publicAsset } from '../utils/paths';
+import brandLogo from '../assets/main logo_-Photoroom.png';
 import './Navbar.css';
 
 export default function Navbar() {
@@ -23,7 +23,7 @@ export default function Navbar() {
     >
       <div className="navbar__inner container">
         <a href="#" className="navbar__logo">
-          <img src={publicAsset('logo.png')} alt="investrategy" />
+          <img src={brandLogo} alt="investrategy" />
         </a>
 
         <ul className="navbar__links">

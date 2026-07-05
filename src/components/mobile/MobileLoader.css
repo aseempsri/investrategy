@@ -24,7 +24,8 @@
 .mobile-loader__tree {
   width: 140px;
   height: auto;
-  filter: drop-shadow(0 0 12px rgba(212, 255, 77, 0.2));
+  mix-blend-mode: screen;
+  filter: drop-shadow(0 0 12px var(--accent-25));
 }
 
 .mobile-loader__logo-mark {
@@ -40,8 +41,7 @@
   display: block;
   object-fit: contain;
   object-position: center;
-  mix-blend-mode: screen;
-  filter: drop-shadow(0 0 10px rgba(212, 255, 77, 0.22));
+  filter: drop-shadow(0 2px 8px var(--shadow-soft));
 }
 
 .mobile-loader__progress-wrap {
@@ -62,7 +62,7 @@
 
 .mobile-loader__track {
   height: 4px;
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--bg-elevated);
   border-radius: 980px;
   overflow: hidden;
 }

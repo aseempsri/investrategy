@@ -14,18 +14,7 @@
   height: 36px;
   width: auto;
   margin-bottom: 1rem;
-  filter:
-    brightness(2.8)
-    contrast(1.04)
-    saturate(1.12)
-    drop-shadow(0 0 14px rgba(200, 245, 66, 0.22))
-    drop-shadow(0 1px 3px rgba(255, 255, 255, 0.08));
-  -webkit-filter:
-    brightness(2.8)
-    contrast(1.04)
-    saturate(1.12)
-    drop-shadow(0 0 14px rgba(200, 245, 66, 0.22))
-    drop-shadow(0 1px 3px rgba(255, 255, 255, 0.08));
+  filter: drop-shadow(0 2px 8px var(--shadow-soft));
 }
 
 .footer__brand p {

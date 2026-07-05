@@ -1,5 +1,5 @@
 .documents {
-  background: radial-gradient(ellipse at 80% 20%, rgba(200, 245, 66, 0.04) 0%, transparent 55%);
+  background: radial-gradient(ellipse at 80% 20%, var(--accent-08) 0%, transparent 55%);
 }
 
 .documents__header {
@@ -35,7 +35,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: rgba(200, 245, 66, 0.12);
+  background: var(--accent-12);
   color: var(--accent);
   font-size: 0.875rem;
   font-weight: 700;
@@ -110,7 +110,7 @@
 }
 
 .documents__card:hover {
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 12px 40px var(--shadow-medium);
 }
 
 .documents__file-type {
@@ -120,7 +120,7 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--accent);
-  background: rgba(200, 245, 66, 0.1);
+  background: var(--accent-10);
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
   margin-bottom: 0.75rem;

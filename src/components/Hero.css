@@ -18,8 +18,8 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 80% 60% at 70% 40%, rgba(200, 245, 66, 0.07) 0%, transparent 70%),
-    radial-gradient(ellipse 50% 40% at 20% 60%, rgba(162, 208, 38, 0.04) 0%, transparent 60%);
+    radial-gradient(ellipse 80% 60% at 70% 40%, var(--accent-08) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 40% at 20% 60%, var(--gold-10) 0%, transparent 60%);
   animation: auroraPulse 8s ease-in-out infinite alternate;
 }
 
@@ -60,8 +60,8 @@
   border-radius: 50%;
   background: radial-gradient(
     circle,
-    rgba(212, 255, 77, 0.16) 0%,
-    rgba(212, 255, 77, 0.06) 45%,
+    var(--accent-16) 0%,
+    var(--accent-08) 45%,
     transparent 72%
   );
   filter: blur(24px);
@@ -86,7 +86,8 @@
   max-width: 360px;
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 0 12px rgba(212, 255, 77, 0.2));
+  mix-blend-mode: screen;
+  filter: drop-shadow(0 0 12px var(--accent-25));
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -133,7 +134,7 @@
 
 .hero__cursor--light {
   background: var(--text-primary);
-  box-shadow: 0 0 8px rgba(245, 245, 247, 0.35);
+  box-shadow: 0 0 8px var(--shadow-soft);
 }
 
 .hero__cursor--accent {

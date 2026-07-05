@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import Scene3D from './Scene3D';
 import TypewriterTitle from './TypewriterTitle';
 import { heroBadges, stats } from '../data/content';
-import heroTree from '../assets/image.png';
+import treeLogo from '../assets/t logo.png';
 import './Hero.css';
 
 interface HeroProps {
@@ -73,7 +73,7 @@ export default function Hero({ isMobileReady = false }: HeroProps) {
           >
             <div className="hero__visual-glow" />
             <motion.img
-              src={heroTree}
+              src={treeLogo}
               alt=""
               className="hero__tree"
               animate={{ y: [0, -14, 0] }}
