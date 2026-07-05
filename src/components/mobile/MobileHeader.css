@@ -1,0 +1,211 @@
+.mobile-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 0.625rem 0 0.75rem;
+  background: linear-gradient(
+    to bottom,
+    rgba(6, 6, 8, 0.96) 0%,
+    rgba(6, 6, 8, 0.88) 70%,
+    transparent 100%
+  );
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+}
+
+.mobile-header__top {
+  display: grid;
+  grid-template-columns: 40px 1fr 40px;
+  align-items: center;
+  padding: 0 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.mobile-header__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-header__logo img {
+  height: 32px;
+  width: auto;
+  filter:
+    brightness(2.8)
+    contrast(1.04)
+    saturate(1.12)
+    drop-shadow(0 0 14px rgba(200, 245, 66, 0.22));
+}
+
+.mobile-header__spacer {
+  width: 40px;
+}
+
+.mobile-header__menu-btn {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.mobile-header__menu-btn span,
+.mobile-header__menu-btn span::before,
+.mobile-header__menu-btn span::after {
+  display: block;
+  width: 18px;
+  height: 1.5px;
+  background: var(--text-primary);
+  border-radius: 2px;
+  transition: all 0.3s;
+  position: absolute;
+  left: 11px;
+  top: 19px;
+}
+
+.mobile-header__menu-btn span::before,
+.mobile-header__menu-btn span::after {
+  content: '';
+}
+
+.mobile-header__menu-btn span::before {
+  top: -6px;
+}
+
+.mobile-header__menu-btn span::after {
+  top: 6px;
+}
+
+.mobile-header__menu-btn span.open {
+  background: transparent;
+}
+
+.mobile-header__menu-btn span.open::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.mobile-header__menu-btn span.open::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+/* Liquid glass pills — shared */
+.liquid-glass-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4375rem;
+  padding: 0.3125rem 0.75rem;
+  border-radius: 980px;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--text-primary);
+  white-space: nowrap;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0 2px 12px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.liquid-glass-pill:active {
+  transform: scale(0.97);
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.mobile-header__pill-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+  box-shadow: 0 0 6px var(--accent-glow);
+}
+
+/* Horizontal nav strip */
+.mobile-header__nav-strip {
+  display: flex;
+  gap: 0.4375rem;
+  overflow-x: auto;
+  padding: 0 1rem 0.25rem;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  position: relative;
+  mask-image: linear-gradient(to right, black 85%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, black 85%, transparent 100%);
+}
+
+.mobile-header__nav-strip::-webkit-scrollbar {
+  display: none;
+}
+
+.mobile-header__nav-strip .liquid-glass-pill {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+
+.mobile-header__nav-strip--bounce {
+  animation: navStripBounce 0.85s ease-in-out;
+}
+
+@keyframes navStripBounce {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(14px); }
+  45% { transform: translateX(-6px); }
+  65% { transform: translateX(10px); }
+  85% { transform: translateX(0); }
+}
+
+/* Hamburger menu overlay */
+.mobile-header__backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  border: none;
+}
+
+.mobile-header__menu {
+  position: fixed;
+  top: calc(var(--mobile-header-height, 108px) - 8px);
+  left: 1rem;
+  right: 1rem;
+  z-index: 1001;
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  background: rgba(20, 20, 24, 0.75);
+  backdrop-filter: blur(32px) saturate(200%);
+  -webkit-backdrop-filter: blur(32px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
+}
+
+.mobile-header__menu-label {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+  padding-left: 0.25rem;
+}
+
+.mobile-header__menu-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.mobile-header__menu-pill {
+  font-size: 0.8125rem;
+  padding: 0.5rem 1rem;
+}

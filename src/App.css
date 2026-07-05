@@ -1,0 +1,75 @@
+.app-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse at 15% 10%, rgba(212, 255, 77, 0.08) 0%, transparent 45%),
+    radial-gradient(ellipse at 85% 20%, rgba(255, 224, 102, 0.05) 0%, transparent 40%),
+    radial-gradient(ellipse at 50% 90%, rgba(212, 255, 77, 0.05) 0%, transparent 50%),
+    var(--bg-primary);
+  animation: bgWarmth 16s ease-in-out infinite alternate;
+}
+
+@keyframes bgWarmth {
+  0% { filter: brightness(1); }
+  100% { filter: brightness(1.06); }
+}
+
+.app-root--mobile {
+  --mobile-header-height: 108px;
+}
+
+main.main--mobile {
+  padding-top: var(--mobile-header-height);
+}
+
+main.main--mobile .hero {
+  min-height: calc(100dvh - var(--mobile-header-height));
+  padding-top: 1.25rem;
+  align-items: flex-start;
+}
+
+main.main--mobile .hero__main {
+  grid-template-columns: 1fr;
+}
+
+main.main--mobile .hero__visual--desktop {
+  display: none;
+}
+
+main.main--mobile .hero__text {
+  text-align: left;
+}
+
+main.main--mobile .hero__subtitle {
+  max-width: none;
+}
+
+main.main--mobile .hero__badges {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+main.main--mobile .hero__badge {
+  width: fit-content;
+}
+
+main.main--mobile .hero__actions {
+  flex-direction: column;
+  width: 100%;
+}
+
+main.main--mobile .hero__actions .btn-primary,
+main.main--mobile .hero__actions .btn-secondary {
+  width: 100%;
+  justify-content: center;
+}
+
+main.main--mobile .hero__scroll {
+  display: none;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}

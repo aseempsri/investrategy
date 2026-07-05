@@ -1,0 +1,139 @@
+.process {
+  background: radial-gradient(ellipse at 20% 80%, rgba(200, 245, 66, 0.03) 0%, transparent 50%);
+}
+
+.process__header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.process__header .section-subtitle {
+  margin: 0 auto;
+}
+
+.process__timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.process__line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--glass-border);
+  transform: translateX(-50%);
+}
+
+.process__line-fill {
+  width: 100%;
+  background: linear-gradient(to bottom, var(--accent), var(--accent-dim));
+  border-radius: 2px;
+}
+
+.process__step {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.process__step--left {
+  justify-content: flex-end;
+  padding-right: calc(50% + 2rem);
+}
+
+.process__step--right {
+  justify-content: flex-start;
+  padding-left: calc(50% + 2rem);
+}
+
+.process__step-card {
+  padding: 1.75rem 2rem;
+  border-radius: var(--radius-md);
+  max-width: 360px;
+  position: relative;
+  z-index: 1;
+}
+
+.process__step-number {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.process__step-card h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.process__step-card p {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.process__dot {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 16px var(--accent-glow);
+  z-index: 2;
+}
+
+@media (max-width: 700px) {
+  .process__line {
+    left: 1rem;
+  }
+
+  .process__step--left,
+  .process__step--right {
+    padding-left: 3rem;
+    padding-right: 0;
+    justify-content: flex-start;
+  }
+
+  .process__dot {
+    left: 1rem;
+  }
+
+  .process__step-card {
+    max-width: 100%;
+  }
+}
+
+.process__docs-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 4rem auto 0;
+  padding: 1.75rem 2rem;
+  border-radius: var(--radius-lg);
+}
+
+.process__docs-link p {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .process__docs-link {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+}
