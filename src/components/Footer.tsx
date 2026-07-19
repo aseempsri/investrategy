@@ -9,6 +9,7 @@ export default function Footer() {
         <div className="footer__top">
           <div className="footer__brand">
             <img src={brandLogo} alt="investrategy" />
+            <p className="footer__tagline">{company.tagline}</p>
             <p>
               Building financial discipline, fostering trust, and nurturing long-term relationships
               that endure beyond market cycles — since {company.founded}.
@@ -19,7 +20,7 @@ export default function Footer() {
             <div>
               <h4>Services</h4>
               <ul>
-                <li><a href="#services">Goal-Based Advisory</a></li>
+                <li><a href="#services">Goal-Based Planning</a></li>
                 <li><a href="#services">SIP & Investing</a></li>
                 <li><a href="#services">Portfolio Management</a></li>
                 <li><a href="#services">Financial Literacy</a></li>
@@ -49,12 +50,12 @@ export default function Footer() {
 
         <div className="footer__disclaimer glass">
           <p>
-            <strong>{company.founder}</strong> — {company.founderTitle}. {company.amfiNote}
+            <strong>{company.founder}</strong> — {company.founderTitle} (ARN No. {company.arn}).{' '}
+            {company.amfiNote}
           </p>
           <p>
             Investrategy is empanelled with leading Asset Management Companies (AMCs) registered in
             India, offering mutual fund solutions across equity, debt, and hybrid categories.
-            Headquartered in {company.headquarters}.
           </p>
           <p>
             Mutual fund investments are subject to market risks. Please read all scheme-related
@@ -64,7 +65,7 @@ export default function Footer() {
           <p>
             The content on this website is for general informational purposes only and does not
             constitute tax, legal, or investment advice. Please consult professionals for guidance
-            specific to your situation.
+            specific to your situation. {company.privacyNote}
           </p>
         </div>
 

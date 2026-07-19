@@ -11,7 +11,6 @@ import {
   RetirementCalculatorPanel,
   SIPCalculatorPanel,
   SipTopUpCalculatorPanel,
-  TaxCalculatorPanel,
 } from './calculators/CalculatorPanels';
 import './Calculators.css';
 
@@ -21,7 +20,6 @@ const PANELS: Record<string, () => React.JSX.Element> = {
   education: EducationCalculatorPanel,
   lumpsum: LumpsumCalculatorPanel,
   emi: EmiCalculatorPanel,
-  tax: TaxCalculatorPanel,
   delay: DelayCalculatorPanel,
   hlv: HlvCalculatorPanel,
   topup: SipTopUpCalculatorPanel,
@@ -45,10 +43,10 @@ export default function Calculators() {
           transition={{ duration: 0.7 }}
         >
           <p className="section-label">Planning Tools</p>
-          <h2 className="section-title">Play with your possibilities</h2>
+          <h2 className="section-title">See your money working smarter</h2>
           <p className="section-subtitle">
-            Explore the numbers behind your dreams — friendly calculators that help you see a
-            brighter financial future taking shape.
+            Explore the numbers behind your dreams — friendly calculators that help you picture a
+            clearer financial future taking shape.
           </p>
         </motion.div>
 

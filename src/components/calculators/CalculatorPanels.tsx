@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import {
   calculateEmi,
-  calculateIncomeTax,
   costOfDelay,
   formatInr,
   goalPlanning,
@@ -155,40 +154,6 @@ export function EmiCalculatorPanel() {
           { label: 'Monthly EMI', value: emi, format: 'currency', accent: true, total: true },
           { label: 'Total Payment', value: totalPayment, format: 'currency' },
           { label: 'Total Interest', value: totalInterest, format: 'currency' },
-        ]}
-      />
-    </CalcPanel>
-  );
-}
-
-export function TaxCalculatorPanel() {
-  const [income, setIncome] = useState(1500000);
-  const [deduction80C, setDeduction80C] = useState(150000);
-  const [deduction80D, setDeduction80D] = useState(25000);
-  const [otherDeductions, setOtherDeductions] = useState(0);
-
-  const result = calculateIncomeTax({
-    grossIncome: income,
-    deduction80C,
-    deduction80D,
-    otherDeductions,
-    isSalaried: true,
-  });
-
-  return (
-    <CalcPanel disclaimer="FY 2025-26 estimate for salaried residents. Includes standard deduction, 87A rebate & 4% cess.">
-      <div className="calc-inputs">
-        <SliderField label="Gross Annual Income (₹)" value={income} onChange={setIncome} min={300000} max={5000000} step={50000} display={formatInr(income)} />
-        <SliderField label="80C Deductions (₹)" value={deduction80C} onChange={setDeduction80C} min={0} max={150000} step={5000} display={formatInr(deduction80C)} />
-        <SliderField label="80D Deductions (₹)" value={deduction80D} onChange={setDeduction80D} min={0} max={100000} step={5000} display={formatInr(deduction80D)} />
-        <SliderField label="Other Deductions (₹)" value={otherDeductions} onChange={setOtherDeductions} min={0} max={500000} step={10000} display={formatInr(otherDeductions)} />
-      </div>
-      <ResultGrid
-        items={[
-          { label: 'Tax (New Regime)', value: result.newTax, format: 'currency' },
-          { label: 'Tax (Old Regime)', value: result.oldTax, format: 'currency' },
-          { label: 'Better Regime', value: result.betterRegime === 'new' ? 'New Regime' : 'Old Regime', format: 'text', accent: true },
-          { label: 'You Save', value: result.savings, format: 'currency', total: true },
         ]}
       />
     </CalcPanel>

@@ -69,6 +69,15 @@
   filter: drop-shadow(0 2px 8px var(--shadow-soft));
 }
 
+.mobile-loader__tagline {
+  margin: -0.5rem 0 0;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--accent-dim);
+  text-align: center;
+}
+
 .mobile-loader__progress-wrap {
   width: 100%;
   margin-top: 0.5rem;

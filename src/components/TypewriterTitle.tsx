@@ -1,16 +1,26 @@
 import { useEffect, useState } from 'react';
+import { company } from '../data/content';
 
-const LINE1 = 'Use your money';
-const LINE2 = 'to make a life.';
-const TYPE_SPEED = 55;
-const PAUSE_BEFORE_LINE2 = 280;
+const [LINE1, LINE2] = (() => {
+  const colon = company.tagline.indexOf(':');
+  if (colon === -1) return [company.tagline, ''] as const;
+  return [
+    company.tagline.slice(0, colon + 1),
+    company.tagline.slice(colon + 1).trim(),
+  ] as const;
+})();
+
+const TYPE_SPEED = 48;
+const PAUSE_BEFORE_LINE2 = 320;
 const PAUSE_BEFORE_RESET = 4500;
+const FADE_MS = 280;
 
 export default function TypewriterTitle() {
   const [line1, setLine1] = useState('');
   const [line2, setLine2] = useState('');
   const [onLine2, setOnLine2] = useState(false);
   const [done, setDone] = useState(false);
+  const [fading, setFading] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
@@ -31,6 +41,7 @@ export default function TypewriterTitle() {
 
     const run = async () => {
       while (!cancelled) {
+        setFading(false);
         setLine1('');
         setLine2('');
         setOnLine2(false);
@@ -48,6 +59,11 @@ export default function TypewriterTitle() {
 
         setDone(true);
         await wait(PAUSE_BEFORE_RESET);
+        if (cancelled) return;
+
+        setFading(true);
+        await wait(FADE_MS);
+        if (cancelled) return;
       }
     };
 
@@ -64,19 +80,35 @@ export default function TypewriterTitle() {
 
   return (
     <h1 className="hero__title">
-      <span className="hero__title-line">
-        {line1}
-        {showCursorLine1 && <span className="hero__cursor hero__cursor--light" aria-hidden="true" />}
+      {/* Invisible full title reserves height so the hero never jumps */}
+      <span className="hero__title-sizer" aria-hidden="true">
+        <span className="hero__title-line">{LINE1}</span>
+        <br />
+        <span className="hero__title-line hero__title-line--accent">
+          <span className="hero__title-accent">{LINE2}</span>
+        </span>
       </span>
-      <br />
-      <span className="hero__title-line hero__title-line--accent">
-        <span className="hero__title-accent">{line2}</span>
-        {showCursorLine2 && (
-          <span
-            className={`hero__cursor hero__cursor--accent${done ? ' hero__cursor--idle' : ''}`}
-            aria-hidden="true"
-          />
-        )}
+
+      <span
+        className={`hero__title-typed${fading ? ' hero__title-typed--fade' : ''}`}
+        aria-label={company.tagline}
+      >
+        <span className="hero__title-line">
+          {line1}
+          {showCursorLine1 && (
+            <span className="hero__cursor hero__cursor--light" aria-hidden="true" />
+          )}
+        </span>
+        <br />
+        <span className="hero__title-line hero__title-line--accent">
+          <span className="hero__title-accent">{line2}</span>
+          {showCursorLine2 && (
+            <span
+              className={`hero__cursor hero__cursor--accent${done ? ' hero__cursor--idle' : ''}`}
+              aria-hidden="true"
+            />
+          )}
+        </span>
       </span>
     </h1>
   );

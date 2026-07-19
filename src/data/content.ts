@@ -4,26 +4,27 @@ export const company = {
   founded: 2008,
   founder: 'Mr. Ashish Srivastava',
   founderTitle: 'AMFI-Registered Advisor & Founder',
-  headquarters: 'Gorakhpur, Uttar Pradesh, India',
+  arn: '65251',
   phone: '+91 90510 40384',
   email: 'hello@investrategy.com',
   amfiNote: 'AMFI-registered mutual fund distributor empanelled with leading Asset Management Companies across India.',
+  tagline: 'Your Money: Working Smarter',
+  privacyNote: 'We do not share your mobile number or email ID.',
 };
 
 export const openingQuote =
   'If you are among those individuals disillusioned with the results of "using your life to make money," you will find the opposite mindset of "using your money to make a life" liberating and compelling.';
 
 export const stats = [
-  { value: '17+', label: 'Years of Trust · Est. 2008' },
-  { value: 'AMFI', label: 'Registered Advisor' },
-  { value: '15+', label: 'AMC Partners Empanelled' },
-  { value: '1000+', label: 'Households Across Bharat' },
+  { value: '18+', label: 'Years of Trust · Est. 2008' },
+  { value: 'AMFI', label: '65251' },
+  { value: '42+', label: 'AMC Partners' },
+  { value: '1000+', label: 'Household Served' },
 ];
 
 export const heroBadges = [
   '✨ AMFI-Registered Advisor',
-  '📍 Headquartered in Gorakhpur, UP',
-  '🎯 Goal-Based Mutual Fund Advisory',
+  '🎯 Goal-Based Mutual Fund Planning',
 ];
 
 export const aboutStory = {
@@ -32,9 +33,9 @@ export const aboutStory = {
   origin:
     'It is from this very philosophy that Investrategy was born. Established in 2008, during one of the most turbulent phases in global financial history, Investrategy began its journey under the guidance of Mr. Ashish Srivastava, an AMFI-registered advisor. The foundation was built on a simple yet enduring belief—true wealth is not created in moments of market euphoria, but through discipline across market cycles.',
   evolution:
-    'Over the years, Investrategy has witnessed and navigated multiple market phases—from the global financial crisis of 2008 and the prolonged stagnation between 2011–2014, to the uncertainty of COVID-19 and geopolitical disruptions such as the Russia–Ukraine conflict. Each phase has reinforced our conviction in disciplined investing and strengthened our evolution into a structured, process-driven, and compliance-focused advisory system.',
+    'Over the years, Investrategy has witnessed and navigated multiple market phases—from the global financial crisis of 2008 and the prolonged stagnation between 2011–2014, to the uncertainty of COVID-19 and geopolitical disruptions such as the Russia–Ukraine conflict. Each phase has reinforced our conviction in disciplined investing and strengthened our evolution into a structured, process-driven, and compliance-focused investment system.',
   today:
-    'Headquartered in Gorakhpur, Uttar Pradesh, Investrategy is empanelled with leading Asset Management Companies (AMCs) registered in India, enabling access to a comprehensive range of mutual fund solutions across equity, debt, and hybrid categories.',
+    'Investrategy is empanelled with leading Asset Management Companies (AMCs) registered in India, enabling access to a comprehensive range of mutual fund solutions across equity, debt, and hybrid categories.',
   closing:
     'At its core, Investrategy is not just about investing in mutual funds—it is about building financial discipline, fostering trust, and nurturing long-term relationships that endure beyond market cycles.',
 };
@@ -71,13 +72,13 @@ export const vision =
   'To empower every household across Bharat with the knowledge, discipline, and access to build long-term wealth through informed mutual fund investing.';
 
 export const goal =
-  'To build a scalable, technology-driven advisory system that delivers disciplined, compliant, and goal-oriented mutual fund solutions to every client.';
+  'To build a scalable, technology-driven investment system that delivers disciplined, compliant, and goal-oriented mutual fund solutions to every client.';
 
 export const missionPillars = [
   {
     number: '01',
-    title: 'Client-Centric, Goal-Based Advisory',
-    text: 'Personalized mutual fund solutions aligned with each client\'s financial goals, risk profile, and investment horizon through structured advisory frameworks.',
+    title: 'Client-Centric, Goal-Based Planning',
+    text: 'Personalized mutual fund solutions aligned with each client\'s financial goals, risk profile, and investment horizon through structured planning frameworks.',
   },
   {
     number: '02',
@@ -103,7 +104,7 @@ export const missionPillars = [
 
 export const marketTimeline = [
   { year: '2008', event: 'Founded during the global financial crisis — discipline over euphoria.' },
-  { year: '2011–14', event: 'Navigated prolonged market stagnation with steady, process-driven advisory.' },
+  { year: '2011–14', event: 'Navigated prolonged market stagnation with a steady, process-driven approach.' },
   { year: '2020', event: 'Guided clients through COVID-19 uncertainty with clarity and calm.' },
   { year: '2022+', event: 'Adapted strategies through geopolitical disruptions including Russia–Ukraine conflict.' },
 ];
@@ -142,7 +143,7 @@ export const lifeStages = [
 
 export const services = [
   {
-    title: 'Goal-Based Mutual Fund Advisory',
+    title: 'Goal-Based Mutual Fund Planning',
     description:
       'Every engagement starts with your goals — not products. We align equity, debt, and hybrid mutual fund solutions with your risk profile and investment horizon.',
     tag: 'Start Here',
@@ -172,7 +173,7 @@ export const services = [
     tag: 'Trust',
   },
   {
-    title: 'Long-Term Relationship Advisory',
+    title: 'Long-Term Relationship Guidance',
     description:
       'Enduring partnerships focused on wealth creation beyond market cycles — guiding you with clarity and protecting you from impulsive decisions.',
     tag: 'Partner',
@@ -184,14 +185,14 @@ export const testimonials = [
     quote:
       'What impressed us most was their discipline during market downturns. While others panicked in 2020, Investrategy kept us focused on our long-term goals — and we\'re grateful for that steady hand.',
     name: 'Rajesh & Sunita V.',
-    detail: 'SIP Investors · Gorakhpur',
+    detail: 'SIP Investors',
     emoji: '🙏',
   },
   {
     quote:
       'Mr. Srivastava took time to understand our family\'s goals before suggesting anything. No pressure, complete transparency — exactly the kind of advisor we were looking for.',
     name: 'Amit K.',
-    detail: 'Goal-Based Planning · Uttar Pradesh',
+    detail: 'Goal-Based Planning',
     emoji: '💚',
   },
   {
@@ -252,7 +253,6 @@ export const calculators = [
   { id: 'education', name: 'Education Calculator', desc: 'Prepare for your child\'s education goals systematically.' },
   { id: 'lumpsum', name: 'Lumpsum Calculator', desc: 'Understand what a one-time investment can grow into.' },
   { id: 'emi', name: 'EMI Calculator', desc: 'Plan loans wisely — keep room for your investment goals.' },
-  { id: 'tax', name: 'Income Tax Calculator', desc: 'Compare old vs new tax regimes for your income.' },
   { id: 'delay', name: 'Cost of Delay', desc: 'See why starting your SIP today makes a real difference.' },
   { id: 'hlv', name: 'Human Life Value', desc: 'Calculate the life cover your family needs.' },
   { id: 'topup', name: 'SIP Top-Up', desc: 'Grow your SIP as your income grows each year.' },
@@ -312,7 +312,7 @@ export const documentCategories: {
     label: 'Privacy & Data',
     icon: '🔒',
     intro:
-      'Understand how your personal and financial data is collected, protected, and shared — and provide the consent required before we begin advisory services.',
+      'Understand how your personal and financial data is collected, protected, and shared — and provide the consent required before we begin our services.',
   },
   {
     id: 'feedback',
@@ -370,7 +370,7 @@ export const clientDocuments: ClientDocument[] = [
     description:
       'Our standard operating procedure for collecting, classifying, storing, and sharing client data in compliance with AMFI and SEBI requirements.',
     howToUse:
-      'Review to see how your KYC, financial, and advisory data is handled — including who can access it and when it may be shared with AMCs or regulators.',
+      'Review to see how your KYC, financial, and client data is handled — including who can access it and when it may be shared with AMCs or regulators.',
     file: publicAsset('downloads/data-privacy-sop.docx'),
     category: 'privacy',
   },
@@ -378,7 +378,7 @@ export const clientDocuments: ClientDocument[] = [
     id: 'data-consent',
     title: 'Client Data Consent Form',
     description:
-      'Explicit consent for collection, processing, storage, and sharing of your personal and financial data for advisory services and regulatory compliance.',
+      'Explicit consent for collection, processing, storage, and sharing of your personal and financial data for our services and regulatory compliance.',
     howToUse:
       'Download, read the purpose and sharing clauses, sign, and return before onboarding. No consent means we cannot collect or process your data.',
     file: publicAsset('downloads/data-consent-form.docx'),

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import treeLogo from '../../assets/t logo_new.png';
 import brandLogo from '../../assets/main logo_-Photoroom.png';
+import { company } from '../../data/content';
 import './MobileLoader.css';
 
 interface MobileLoaderProps {
@@ -66,6 +67,8 @@ export default function MobileLoader({ onComplete }: MobileLoaderProps) {
             className="mobile-loader__logo"
           />
         </motion.div>
+
+        <p className="mobile-loader__tagline">{company.tagline}</p>
 
         <div className="mobile-loader__progress-wrap">
           <div className="mobile-loader__progress-label">

@@ -64,6 +64,7 @@ export default function About() {
                 <span className="about__founder-badge">Est. {company.founded}</span>
                 <h3>{company.founder}</h3>
                 <span className="about__founder-title">{company.founderTitle}</span>
+                <span className="about__founder-arn">ARN No. {company.arn}</span>
                 <span className="about__founder-rule" aria-hidden="true" />
               </div>
             </div>
@@ -71,7 +72,6 @@ export default function About() {
               Founded Investrategy during the 2008 global financial crisis with a belief that true
               wealth is built through discipline across market cycles — not moments of euphoria.
             </p>
-            <span className="about__founder-location">📍 {company.headquarters}</span>
             <div className="about__stats">
               {stats.map((stat) => (
                 <div key={stat.label} className="about__stat">

@@ -96,11 +96,32 @@
 }
 
 .hero__title {
+  position: relative;
   font-size: clamp(2.75rem, 7vw, 5.5rem);
   font-weight: 700;
   letter-spacing: -0.04em;
-  line-height: 1.05;
-  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  margin-bottom: 2.25rem;
+  overflow: visible;
+}
+
+.hero__title-sizer {
+  display: block;
+  visibility: hidden;
+  pointer-events: none;
+  user-select: none;
+}
+
+.hero__title-typed {
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100%;
+  opacity: 1;
+  transition: opacity 0.28s ease;
+}
+
+.hero__title-typed--fade {
+  opacity: 0;
 }
 
 .hero__title-accent {
@@ -108,6 +129,9 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  padding-bottom: 0.12em;
+  display: inline-block;
+  line-height: 1.25;
 }
 
 .hero__title-line {
@@ -118,6 +142,9 @@
   display: inline-flex;
   align-items: baseline;
   flex-wrap: wrap;
+  padding-bottom: 0.08em;
+  overflow: visible;
+  min-height: 1.25em;
 }
 
 .hero__cursor {

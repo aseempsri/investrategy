@@ -42,9 +42,9 @@ export default function Hero({ isMobileReady = false }: HeroProps) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 2.8 }}
             >
-              Imagine waking up knowing your money is working for the life you want — not the
-              other way around. Since 2008, Investrategy has guided households across Bharat with
-              discipline, clarity, and confidence through every market cycle.
+              Not harder hours. Not louder markets. Just a clearer plan — so your money works
+              for the life you want. Since 2008, Investrategy has guided households across Bharat
+              with discipline, clarity, and confidence through every market cycle.
             </motion.p>
             <motion.div
               className="hero__actions"
@@ -53,7 +53,7 @@ export default function Hero({ isMobileReady = false }: HeroProps) {
               transition={{ duration: 0.7, delay: 3.1 }}
             >
               <a href="#contact" className="btn-primary">
-                Start Your Free Visit
+                Start Your Free Consultation
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                   <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>

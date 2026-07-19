@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { resources } from '../data/content';
+import { resources, company } from '../data/content';
 import './Resources.css';
 
 export default function Resources() {
@@ -67,6 +67,7 @@ export default function Resources() {
             <input type="text" placeholder="Last Name" required />
             <input type="email" placeholder="Email" required />
             <button type="submit" className="btn-primary">Get My Free Guide</button>
+            <p className="resources__privacy">{company.privacyNote}</p>
           </form>
         </motion.div>
       </div>

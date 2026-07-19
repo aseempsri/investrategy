@@ -106,6 +106,14 @@
   color: var(--text-muted);
 }
 
+.resources__privacy {
+  font-size: 0.75rem;
+  line-height: 1.45;
+  color: var(--text-muted);
+  text-align: center;
+  margin: 0;
+}
+
 @media (max-width: 768px) {
   .resources__grid {
     grid-template-columns: 1fr;

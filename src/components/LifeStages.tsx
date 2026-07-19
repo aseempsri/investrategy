@@ -7,7 +7,13 @@ export default function LifeStages() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: '-80px' });
   const [active, setActive] = useState(0);
+  const [hasInteracted, setHasInteracted] = useState(false);
   const stage = lifeStages[active];
+
+  const selectStage = (i: number) => {
+    setActive(i);
+    setHasInteracted(true);
+  };
 
   return (
     <section className="stages" id="stages" ref={ref}>
@@ -27,14 +33,24 @@ export default function LifeStages() {
         </motion.div>
 
         <div className="stages__layout">
+          <p
+            className={`stages__hint${hasInteracted ? ' stages__hint--done' : ' stages__hint--pulse'}`}
+            aria-hidden={hasInteracted}
+          >
+            <span className="stages__hint-hand">👇</span>
+            <span>Click a life stage to explore</span>
+          </p>
+
           <div className="stages__tabs" role="tablist" aria-label="Life stages">
             {lifeStages.map((item, i) => (
               <motion.button
                 key={item.id}
                 role="tab"
                 aria-selected={active === i}
-                className={`stages__tab glass ${active === i ? 'stages__tab--active' : ''}`}
-                onClick={() => setActive(i)}
+                className={`stages__tab glass ${active === i ? 'stages__tab--active' : ''}${
+                  !hasInteracted && active !== i ? ' stages__tab--blink' : ''
+                }`}
+                onClick={() => selectStage(i)}
                 initial={{ opacity: 0, y: 12 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.15 + i * 0.08 }}

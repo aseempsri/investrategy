@@ -36,7 +36,7 @@ export default function Navbar() {
 
         <div className="navbar__actions">
           <a href="#contact" className="btn-primary navbar__cta">
-            Free Visit
+            Free Consultation
           </a>
           <button
             className="navbar__menu-btn"
@@ -62,7 +62,7 @@ export default function Navbar() {
               </a>
             ))}
             <a href="#contact" className="btn-primary" onClick={() => setMenuOpen(false)}>
-              Free Visit
+              Free Consultation
             </a>
           </motion.div>
         )}

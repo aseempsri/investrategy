@@ -24,39 +24,34 @@ export default function Contact() {
             transition={{ duration: 0.7 }}
           >
             <p className="section-label">Let&apos;s Connect</p>
-            <h2 className="section-title">Start your disciplined investing journey</h2>
+            <h2 className="section-title">Ready for your money working smarter?</h2>
             <p className="section-subtitle">
-              Book a complimentary consultation with our AMFI-registered advisory team — a
-              conversation about your goals, your risk profile, and the life you&apos;re building
-              toward.
+              Book a complimentary consultation to have a conversation about your goals, your
+              risk profile, and the life you&apos;re building toward.
             </p>
 
             <div className="contact__details">
-              <div className="contact__detail glass">
-                <span className="contact__detail-icon">📞</span>
-                <div>
-                  <strong>Phone</strong>
-                  <p>{company.phone}</p>
+              <div className="contact__details-row">
+                <div className="contact__detail glass">
+                  <span className="contact__detail-icon">📞</span>
+                  <div>
+                    <strong>Phone</strong>
+                    <p>{company.phone}</p>
+                  </div>
                 </div>
-              </div>
-              <div className="contact__detail glass">
-                <span className="contact__detail-icon">✉️</span>
-                <div>
-                  <strong>Email</strong>
-                  <p>{company.email}</p>
-                </div>
-              </div>
-              <div className="contact__detail glass">
-                <span className="contact__detail-icon">📍</span>
-                <div>
-                  <strong>Headquarters</strong>
-                  <p>{company.headquarters}</p>
+                <div className="contact__detail glass">
+                  <span className="contact__detail-icon">✉️</span>
+                  <div>
+                    <strong>Email</strong>
+                    <p>{company.email}</p>
+                  </div>
                 </div>
               </div>
               <div className="contact__detail glass">
                 <span className="contact__detail-icon">🛡️</span>
                 <div>
-                  <strong>Regulatory</strong>
+                  <strong>AMFI Registration</strong>
+                  <p className="contact__arn">ARN No. {company.arn}</p>
                   <p>{company.amfiNote}</p>
                 </div>
               </div>
@@ -75,10 +70,12 @@ export default function Contact() {
                 <span className="contact__success-icon">🎉</span>
                 <h3>Wonderful — we can&apos;t wait to meet you!</h3>
                 <p>We&apos;ll reach out shortly to schedule your complimentary consultation. Your disciplined investing journey begins here.</p>
+                <p className="contact__privacy">{company.privacyNote}</p>
               </div>
             ) : (
               <>
                 <h3>Book Your Free Consultation</h3>
+                <p className="contact__privacy">{company.privacyNote}</p>
                 <div className="contact__form-row">
                   <input type="text" placeholder="First Name" required />
                   <input type="text" placeholder="Last Name" required />
@@ -98,6 +95,7 @@ export default function Contact() {
                 <button type="submit" className="btn-primary contact__submit">
                   Let&apos;s Begin →
                 </button>
+                <p className="contact__privacy contact__privacy--footer">{company.privacyNote}</p>
               </>
             )}
           </motion.form>

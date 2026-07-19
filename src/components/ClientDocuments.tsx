@@ -135,7 +135,7 @@ export default function ClientDocuments() {
             </p>
           </div>
           <a href="#contact" className="btn-secondary documents__contact-btn">
-            Talk to an Advisor →
+            Connect with our team →
           </a>
         </motion.div>
       </div>

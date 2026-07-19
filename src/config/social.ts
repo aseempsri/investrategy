@@ -11,7 +11,7 @@ export const SHARE_IMAGE_FILE = 'og-share.png';
 export const SHARE_IMAGE_REVISION = '1';
 
 export const SITE_TITLE =
-  'investrategy | AMFI-Registered Mutual Fund Advisory · Gorakhpur, India';
+  'investrategy | Your Money: Working Smarter';
 
 export const SITE_DESCRIPTION =
-  'investrategy — Financial life planning, investment strategy, and wealth guidance for every stage of life.';
+  'Your Money: Working Smarter — Financial life planning, investment strategy, and wealth guidance from an AMFI-registered advisor.';
